@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 学習記録アプリ
 
-## Getting Started
+毎日の勉強科目、勉強時間、学習内容を記録するWebアプリです。
 
-First, run the development server:
+## 公開URL
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+https://study-record-app-nine.vercel.app/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## GitHub
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+https://github.com/gotakuho/study-record-app
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 主な機能
 
-## Learn More
+- 学習科目を選択できる
+- 学習時間とメモを入力できる
+- 学習記録を追加できる
+- 合計勉強時間を自動で計算できる
+- 学習記録の件数を表示できる
+- 不要な記録を削除できる
+- ページを再読み込みしても記録が残る
 
-To learn more about Next.js, take a look at the following resources:
+## 使用した技術
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- localStorage
+- GitHub
+- Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 設計上の工夫
 
-## Deploy on Vercel
+学習時間を自動で合計し、利用者が勉強量を簡単に確認できるようにしました。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+入力された記録はlocalStorageに保存し、ページを再読み込みしてもデータが残るようにしました。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+誤って記録を削除しないように、削除前に確認画面を表示するようにしました。
+
+スマートフォンとパソコンの両方で使いやすい画面になるようにデザインしました。
+
+## データの保存について
+
+現在、学習記録はブラウザのlocalStorageに保存されます。
+
+そのため、別の端末や別のブラウザにはデータが共有されません。
+
+## 生成AIの利用
+
+アプリの設計、プログラムの作成、エラーの確認、READMEの作成に生成AIを利用しました。
+
+生成された内容は、動作を確認しながら修正しました。
+
+## 今後追加したい機能
+
+- データベースへの保存
+- ユーザーのログイン機能
+- 科目ごとの勉強時間の集計
+- 学習記録の編集機能
+- 自動テスト
